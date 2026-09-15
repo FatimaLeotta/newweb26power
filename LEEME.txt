@@ -1,0 +1,35 @@
+SITIO DE FATIMA LEOTTA - 10 archivos
+
+COMO SUBIRLO A GITHUB
+---------------------
+1. Abri esta carpeta. Adentro hay 10 archivos sueltos.
+2. En GitHub, entra a tu repo y borra TODO lo que haya adentro.
+3. Boton "Add file" > "Upload files".
+4. Selecciona los 10 archivos de adentro de esta carpeta y arrastralos.
+   IMPORTANTE: arrastra los ARCHIVOS, no la carpeta.
+5. "Commit changes".
+
+NUNCA uses el boton "Edit this file" de GitHub sobre los .html:
+son archivos grandes y el editor los deja vacios.
+
+Si un archivo se te descargo como "index (1).html" o similar,
+renombralo a "index.html" antes de subirlo.
+
+LAS 6 PAGINAS
+-------------
+index.html      Home
+empresas.html   Empresas y founders
+skillup.html    Lideres y HR
+carrera.html    Profesionales en tech
+eventos.html    Speaker & Host
+sobre-mi.html   Sobre mi
+
+Cada pagina tiene las imagenes y las tipografias adentro del propio
+archivo. No hay carpeta de assets.
+
+LOS OTROS 4
+-----------
+vercel.json   configuracion para que Vercel no intente compilar nada
+robots.txt    permiso de indexacion para Google
+sitemap.xml   lista de las 6 paginas para Google
+og.jpg        imagen de vista previa al compartir el link

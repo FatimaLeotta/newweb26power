@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://fatimaleotta.vercel.app/</loc>
+    <lastmod>2026-09-15</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://fatimaleotta.vercel.app/empresas.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://fatimaleotta.vercel.app/skillup.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://fatimaleotta.vercel.app/carrera.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://fatimaleotta.vercel.app/eventos.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fatimaleotta.vercel.app/sobre-mi.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+</urlset>
