@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Mesa de Founders · Edición 01</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#000000; --ink:#FFFFFF; --muted:#B9B4C2; --line:#2A2730;
+  --lila:#CDB4E3; --violeta:#3D0A6B; --violeta-2:#52178A; --error:#FFB4B4;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink)}
+body{font-family:'DM Sans',system-ui,sans-serif;font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased;min-height:100vh}
+.wrap{max-width:560px;margin:0 auto;padding:28px 20px 48px}
+header{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:28px}
+.brand{font-family:'Source Serif 4',Georgia,serif;font-style:italic;font-size:19px}
+.ed{font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted)}
+h1{font-family:'Source Serif 4',Georgia,serif;font-weight:400;font-size:34px;line-height:1.1;margin:0 0 10px;letter-spacing:-.3px}
+h1 em{color:var(--lila)}
+.lead{color:var(--muted);margin:0 0 24px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--lila);margin:0 0 8px}
+.list{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.name-btn{width:100%;min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border:1px solid var(--line);border-radius:14px;background:#0E0D10;color:var(--ink);font:500 17px 'DM Sans',system-ui,sans-serif;text-align:left;cursor:pointer}
+.name-btn:hover,.name-btn:focus-visible{border-color:var(--lila);outline:none}
+.name-btn .arrow{color:var(--lila);font-size:20px}
+.done{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--lila)}
+.card{border:1px solid var(--line);border-radius:18px;padding:22px 20px;background:#0B0A0D}
+label{display:block;font-weight:700;font-size:15px;margin:0 0 8px}
+.hint{color:var(--muted);font-size:14px;margin:-2px 0 10px}
+input[type=password],input[type=text],textarea{width:100%;border:1px solid #3A3542;border-radius:12px;background:#000;color:var(--ink);font:400 17px 'DM Sans',system-ui,sans-serif;padding:14px 16px}
+input:focus,textarea:focus{outline:2px solid var(--lila);outline-offset:1px;border-color:transparent}
+.pin{font-size:28px;letter-spacing:12px;text-align:center;max-width:180px}
+textarea{min-height:130px;resize:vertical;line-height:1.45}
+.field{margin-bottom:22px}
+.btn{width:100%;min-height:56px;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border:0;border-radius:999px;background:var(--violeta);color:#fff;font:700 15px 'DM Sans',system-ui,sans-serif;letter-spacing:1.8px;text-transform:uppercase;cursor:pointer}
+.btn:hover,.btn:focus-visible{background:var(--violeta-2);outline:2px solid var(--lila);outline-offset:2px}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.link{background:none;border:0;color:var(--lila);font:500 15px 'DM Sans',system-ui,sans-serif;padding:12px 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.err{color:var(--error);font-size:15px;margin:10px 0 0;min-height:22px}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:22px}
+.seg button{min-height:52px;border:1px solid #3A3542;border-radius:12px;background:#000;color:var(--muted);font:500 15px 'DM Sans',system-ui,sans-serif;cursor:pointer;padding:8px}
+.seg button[aria-pressed=true]{border-color:var(--lila);background:var(--violeta);color:#fff;font-weight:700}
+.qbox{border-left:0;border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:#000;font-family:'Source Serif 4',Georgia,serif;font-size:20px;line-height:1.35;margin-bottom:6px}
+.ok{text-align:center;padding:12px 0}
+.ok .check{width:64px;height:64px;border-radius:50%;background:var(--violeta);display:inline-flex;align-items:center;justify-content:center;margin-bottom:16px;border:2px solid var(--lila)}
+.hidden{display:none !important}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer b{font-family:'Source Serif 4',Georgia,serif;font-weight:400;color:var(--ink);font-size:16px}
+footer i{color:var(--lila);font-family:'Source Serif 4',Georgia,serif}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <span class="brand">Mesa de Founders</span>
+    <span class="ed">Edición 01</span>
+  </header>
+
+  <!-- Paso 1: lista de nombres -->
+  <section id="s-list">
+    <p class="eyebrow">Viernes 13/11 · La Oficina</p>
+    <h1>Cómo liderar equipos <em>autónomos</em> que alcancen resultados</h1>
+    <p class="lead">Buscá tu nombre para empezar.</p>
+    <ul class="list" id="names"></ul>
+  </section>
+
+  <!-- Paso 2: PIN -->
+  <section id="s-pin" class="hidden">
+    <button class="link" type="button" data-back>← Volver a la lista</button>
+    <p class="eyebrow">Hola</p>
+    <h1 id="pin-name"></h1>
+    <div class="card">
+      <form id="pin-form" autocomplete="off">
+        <label for="pin">Tu PIN de 2 dígitos</label>
+        <p class="hint">Te lo pasó Fátima.</p>
+        <input id="pin" class="pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="2" required>
+        <p class="err" id="pin-err" role="alert"></p>
+        <button class="btn" type="submit">Entrar →</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Paso 3: pregunta y respuesta -->
+  <section id="s-answer" class="hidden">
+    <button class="link" type="button" data-back>← Salir</button>
+    <p class="eyebrow" id="a-name"></p>
+    <h1 id="a-title">Tu pregunta para esta mesa</h1>
+    <p class="lead" id="a-lead"></p>
+    <div class="card">
+      <form id="a-form">
+        <div class="seg" role="group" aria-label="Momento">
+          <button type="button" data-stage="antes" aria-pressed="true">Antes del encuentro</button>
+          <button type="button" data-stage="despues" aria-pressed="false">Después del encuentro</button>
+        </div>
+
+        <div class="field" id="q-edit">
+          <label for="q">Tu pregunta</label>
+          <p class="hint">Si salieras de la mesa con una sola respuesta, ¿cuál sería la pregunta?</p>
+          <textarea id="q" rows="3" required placeholder="Escribí tu pregunta…"></textarea>
+        </div>
+
+        <div class="field hidden" id="q-view">
+          <label>Tu pregunta</label>
+          <div class="qbox" id="q-text"></div>
+          <button class="link" type="button" id="q-change">Editar pregunta</button>
+        </div>
+
+        <div class="field">
+          <label for="r" id="r-label">Tu respuesta hoy</label>
+          <p class="hint" id="r-hint">Con lo que sabés ahora, ¿cómo la responderías?</p>
+          <textarea id="r" rows="5" required placeholder="Escribí tu respuesta…"></textarea>
+        </div>
+
+        <p class="err" id="a-err" role="alert"></p>
+        <button class="btn" type="submit">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 21l2.2-5.2A8.4 8.4 0 1 1 21 11.5z"/></svg>
+          Enviar por WhatsApp
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Paso 4: enviado -->
+  <section id="s-ok" class="hidden">
+    <div class="card ok">
+      <div class="check"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></div>
+      <h1 id="ok-title">¡Listo!</h1>
+      <p class="lead" id="ok-text">Se abrió WhatsApp con tu mensaje. Tocá enviar y ya está.</p>
+      <button class="btn" type="button" id="ok-again">Abrir WhatsApp de nuevo</button>
+      <button class="link" type="button" data-back>Volver al inicio</button>
+    </div>
+  </section>
+
+  <footer>
+    <span><b>fátima LEOTTA</b> · Aligning people &amp; business <i>in tech</i></span>
+    <span>@fatima.leotta</span>
+  </footer>
+</main>
+
+<script>
+(function(){
+  var WA = '5492646272661';
+  var PEOPLE = [
+    ['Rosario Ahumada','21'],['Andrés Cortez','43'],['Augusto Benitez','39'],
+    ['Guillermina Ramos','91'],['Maira Mateo','83'],['Leonardo Bordón','30'],
+    ['Iñaki Olazábal','18'],['Max Quintana','41'],['Cristian Gonzalez','56'],
+    ['Francisco Pontoriero','60'],['Hector Rial','51'],['Marcelo Cuenca','62'],
+    ['Alejandra Jiménez','59'],['Juliana Diaz','37'],['Matías Soria','40'],
+    ['Fátima Leotta (prueba)','77']
+  ];
+  PEOPLE.sort(function(a,b){return a[0].localeCompare(b[0],'es');});
+
+  var current = null, stage = 'antes', lastUrl = '';
+
+  function store(k,v){try{ if(v===undefined){return localStorage.getItem(k);} localStorage.setItem(k,v);}catch(e){return null;}}
+  function key(n,f){return 'mesa01:'+f+':'+n;}
+
+  function $(id){return document.getElementById(id);}
+  function show(id){['s-list','s-pin','s-answer','s-ok'].forEach(function(s){$(s).classList.toggle('hidden',s!==id);}); window.scrollTo(0,0);}
+
+  // Lista
+  var ul = $('names');
+  PEOPLE.forEach(function(p){
+    var li = document.createElement('li');
+    var b = document.createElement('button');
+    b.type='button'; b.className='name-btn';
+    var span = document.createElement('span'); span.textContent = p[0];
+    var right = document.createElement('span'); right.className='arrow'; right.setAttribute('aria-hidden','true'); right.textContent='→';
+    b.appendChild(span); b.appendChild(right);
+    b.addEventListener('click', function(){ openPin(p); });
+    li.appendChild(b); ul.appendChild(li);
+  });
+
+  document.querySelectorAll('[data-back]').forEach(function(b){ b.addEventListener('click', function(){ current=null; show('s-list'); }); });
+
+  function openPin(p){
+    current = p; $('pin-name').textContent = p[0].split(' ')[0];
+    $('pin').value=''; $('pin-err').textContent='';
+    show('s-pin'); setTimeout(function(){$('pin').focus();},50);
+  }
+
+  $('pin-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    if($('pin').value.trim() === current[1]){ openAnswer(); }
+    else { $('pin-err').textContent = 'Ese PIN no coincide. Probá de nuevo.'; $('pin').value=''; $('pin').focus(); }
+  });
+
+  // Respuesta
+  function setStage(s){
+    stage = s;
+    document.querySelectorAll('[data-stage]').forEach(function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-stage')===s)); });
+    if(s==='antes'){
+      $('r-label').textContent='Tu respuesta hoy';
+      $('r-hint').textContent='Con lo que sabés ahora, ¿cómo la responderías?';
+      $('a-lead').textContent='Antes de arrancar: escribí tu pregunta y cómo la responderías hoy.';
+    } else {
+      $('r-label').textContent='Tu respuesta después de la mesa';
+      $('r-hint').textContent='Con todo lo que vimos, ¿cómo la responderías ahora?';
+      $('a-lead').textContent='Volvé a responder tu pregunta con todo lo que vimos en la mesa.';
+    }
+  }
+  document.querySelectorAll('[data-stage]').forEach(function(b){ b.addEventListener('click', function(){ setStage(b.getAttribute('data-stage')); }); });
+
+  function viewQuestion(q){
+    var has = !!(q && q.trim());
+    $('q-edit').classList.toggle('hidden', has);
+    $('q-view').classList.toggle('hidden', !has);
+    $('q-text').textContent = q || '';
+    $('q').value = q || '';
+    $('q').required = !has;
+  }
+  $('q-change').addEventListener('click', function(){ $('q-view').classList.add('hidden'); $('q-edit').classList.remove('hidden'); $('q').required=true; $('q').focus(); });
+
+  function openAnswer(){
+    var n = current[0];
+    $('a-name').textContent = n;
+    var q = store(key(n,'q')) || '';
+    var sentAntes = store(key(n,'antes')) === '1';
+    viewQuestion(q);
+    $('r').value=''; $('a-err').textContent='';
+    setStage(sentAntes ? 'despues' : 'antes');
+    show('s-answer');
+  }
+
+  $('a-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var n = current[0];
+    var q = $('q-edit').classList.contains('hidden') ? $('q-text').textContent : $('q').value.trim();
+    var r = $('r').value.trim();
+    if(!q){ $('a-err').textContent='Escribí tu pregunta.'; $('q').focus(); return; }
+    if(!r){ $('a-err').textContent='Escribí tu respuesta.'; $('r').focus(); return; }
+    store(key(n,'q'), q);
+    store(key(n,stage), '1');
+    var etapa = stage==='antes' ? 'ANTES del encuentro' : 'DESPUÉS del encuentro';
+    var msg = '*Mesa de Founders · Edición 01*\n' +
+              '👤 ' + n + '\n' +
+              '🕐 ' + etapa + '\n\n' +
+              '*Pregunta:*\n' + q + '\n\n' +
+              '*Respuesta:*\n' + r;
+    lastUrl = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(msg);
+    $('ok-title').textContent = stage==='antes' ? '¡Gracias, ' + n.split(' ')[0] + '!' : '¡Gracias por cerrar la mesa!';
+    $('ok-text').textContent = stage==='antes'
+      ? 'Se abrió WhatsApp con tu mensaje: tocá enviar. Al final del encuentro volvé a entrar: tu pregunta va a estar guardada.'
+      : 'Se abrió WhatsApp con tu mensaje: tocá enviar. ¡Gracias por ser parte de esta primera edición!';
+    show('s-ok');
+    window.location.href = lastUrl;
+  });
+
+  $('ok-again').addEventListener('click', function(){ if(lastUrl){ window.location.href = lastUrl; } });
+})();
+</script>
+</body>
+</html>
